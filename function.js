@@ -151,3 +151,6 @@ async function openModal(wordId) {
  function closeModal() {
     document.getElementById('vocab-modal').classList.add('hidden');
 }
+
+// Load lessons on page load
+document.addEventListener('DOMContentLoaded', fetchLessons);

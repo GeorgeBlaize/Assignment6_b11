@@ -124,3 +124,25 @@ async function fetchWords(levelId, button) {
         document.getElementById('loading-spinner').classList.add('hidden');
     }
 }
+
+// Fetch word details for modal
+async function openModal(wordId) {
+    try {
+        const response = await fetch(`https://openapi.programming-hero.com/api/word/${wordId}`);
+        const data = await response.json();
+        const word = data.data;
+
+        if (data.status && word) {
+            document.getElementById('modal-word').textContent = `${word.word || 'N/A'} (${word.bengali_meaning || 'N/A'})`;
+            document.getElementById('modal-meaning').innerHTML = `Meaning: <span class="font-bold">${word.meaning || 'N/A'}</span>`;
+            document.getElementById('modal-example').innerHTML = `Example: <span class="font-bold">${word.example || 'N/A'}</span>`;
+            document.getElementById('modal-synonyms').innerHTML = `Synonyms: <span class="font-bold">${word.synonyms?.join(', ') || 'N/A'}</span>`;
+            document.getElementById('vocab-modal').classList.remove('hidden');
+        } else {
+            Swal.fire('Error', 'Word details not found', 'error');
+        }
+    } catch (error) {
+        console.error('Error fetching word details:', error);
+        Swal.fire('Error', 'Failed to load word details', 'error');
+    }
+}

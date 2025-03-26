@@ -21,6 +21,29 @@
      </style>
 </head>
 <body class="min-h-screen flex flex-col">
+     <!-- Navbar -->
+     <nav id="navbar" class="hidden fixed top-0 w-full bg-gray-200 border-b border-gray-200 z-10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16 items-center">
+                <div class="flex items-center">
+                    <span class="text-xl font-bold text-gray-800">English</span>
+                    <img src="assets/logo.png" alt="Logo" class="h-8 w-8 mx-2">
+                    <span class="text-xl font-bold text-gray-800 bengali-text">জানালা</span>
+                </div>
+                <div class="flex space-x-2">
+                    <button onclick="scrollToSection('faq-section')" class="flex items-center px-2 py-1 text-sm font-medium text-gray-700 bg-gray-100 border-2 border-purple-600 rounded-lg hover:bg-purple-600 hover:text-white">
+                        <img src="assets/fa-circle-question.png" alt="FAQ" class="w-4 h-4 mr-1"> <span class="text-purple-700 font-bold hover:text-white">FAQ</span>
+                    </button>
+                    <button onclick="scrollToSection('vocab-section')" class="flex items-center px-2 py-1 text-sm font-medium text-gray-700 bg-gray-100 border-2 border-purple-600 rounded-lg hover:bg-purple-600 hover:text-white">
+                        <img src="assets/fa-book-open.png" alt="Learn" class="w-4 h-4 mr-1"> <span class="text-purple-700 font-bold hover:text-white">Learn</span>
+                    </button>
+                    <button onclick="logout()" class="flex items-center px-2 py-1 text-sm font-medium text-gray-700 bg-gray-100 border-2 border-purple-600 rounded-lg hover:bg-purple-600 hover:text-white">
+                        <img src="assets/fa-arrow-right-from-bracket.png" alt="Logout" class="w-4 h-4 mr-1"> <span class="text-purple-700 font-bold hover:text-white">Logout</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
     
 </body>
 </html>

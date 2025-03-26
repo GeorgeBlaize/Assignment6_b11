@@ -115,5 +115,15 @@
             </div>
         </div>
     </section>
+    <!-- Modal for Vocabulary Details -->
+    <div id="vocab-modal" class="hidden fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
+        <div class="bg-white rounded-lg p-6 w-full max-w-md">
+            <h3 id="modal-word" class="text-xl font-bold mb-2"></h3>
+            <p id="modal-meaning" class="text-gray-600 mb-2">Meaning: <span class="font-bold"></span></p>
+            <p id="modal-example" class="text-gray-600 mb-2">Example: <span class="font-bold"></span></p>
+            <p id="modal-synonyms" class="text-gray-600 mb-4">Synonyms: <span class="font-bold"></span></p>
+            <button onclick="closeModal()" class="w-full bg-purple-600 text-white py-2 rounded-lg hover:bg-purple-700">Complete Learning</button>
+        </div>
+    </div>
 </body>
 </html>

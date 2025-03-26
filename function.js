@@ -26,3 +26,13 @@ document.getElementById('login-form').addEventListener('submit', function(e) {
         document.getElementById('faq-section').classList.remove('hidden');
     });
 });
+
+ // Logout functionality
+ function logout() {
+    Swal.fire('Success', 'Logged out successfully!', 'success').then(() => {
+        document.getElementById('banner').classList.remove('hidden');
+        document.getElementById('navbar').classList.add('hidden');
+        document.getElementById('vocab-section').classList.add('hidden');
+        document.getElementById('faq-section').classList.add('hidden');
+    });
+}

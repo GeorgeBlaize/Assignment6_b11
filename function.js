@@ -36,3 +36,10 @@ document.getElementById('login-form').addEventListener('submit', function(e) {
         document.getElementById('faq-section').classList.add('hidden');
     });
 }
+
+ // Pronounce word function
+ function pronounceWord(word) {
+    const utterance = new SpeechSynthesisUtterance(word);
+    utterance.lang = 'en-EN';
+    window.speechSynthesis.speak(utterance);
+}

@@ -146,3 +146,8 @@ async function openModal(wordId) {
         Swal.fire('Error', 'Failed to load word details', 'error');
     }
 }
+
+ // Close modal
+ function closeModal() {
+    document.getElementById('vocab-modal').classList.add('hidden');
+}

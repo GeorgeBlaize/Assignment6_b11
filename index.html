@@ -71,6 +71,21 @@
             </div>
         </div>
     </section>
-    
+     <!-- Vocabulary Section -->
+     <section id="vocab-section" class="hidden py-16 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl font-bold text-cyan-500 text-center mb-8">Let's <span class="text-black">Learn Vocabularies</span></h2>
+            <div id="lesson-buttons" class="flex justify-center space-x-4 mb-8 flex-wrap"></div>
+            <div id="vocab-content" class="text-center">
+                <p class="text-lg text-gray-600 bengali-text">একটি নির্দিষ্ট Lesson Select করুন</p>
+            </div>
+            <!-- Loading Spinner -->
+            <div id="loading-spinner" class="hidden flex justify-center">
+                <div class="animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-cyan-500"></div>
+            </div>
+            <!-- Words Display -->
+            <div id="words-container" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"></div>
+        </div>
+    </section>
 </body>
 </html>
